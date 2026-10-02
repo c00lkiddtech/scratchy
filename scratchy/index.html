@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Scritchy Scratchy (web)</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #292833; overflow: hidden; touch-action: none; }
+    canvas { display: block; image-rendering: pixelated; }
+    #loader { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: #eee; font: 16px monospace; background: #292833; }
+    #track { width: min(60vw, 420px); height: 10px; background: #444; }
+    #bar { height: 100%; width: 0; background: #ffb200; transition: width .1s; }
+  </style>
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="loader"><div id="status">Loading…</div><div id="track"><div id="bar"></div></div></div>
+  <script src="loader.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
